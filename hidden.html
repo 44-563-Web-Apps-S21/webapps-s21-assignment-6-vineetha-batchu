@@ -39,7 +39,7 @@
     
     </script>
     <div class="container">
-        <img id="plant" src="amarnath.jpg" width="200" height="200" onclick="rotateImage()">
+        <img id="plants" src="amarnath.jpg" width="200" height="200" onclick="rotateImage()">
     </div>
     <script>
         var currentImage=0;
@@ -48,19 +48,19 @@
     switch(currentImage){
         case 0:
             currentImage=currentImage+1;
-            document.getElementById("plant").src= "amarnath.jpg"
+            document.getElementById("plants").src= "amarnath.jpg"
             break;
             case 1:
             currentImage=currentImage+1;
-            document.getElementById("plant").src= "hibiscus.jpg"
+            document.getElementById("plants").src= "hibiscus.jpg"
             break;
             case 2:
             currentImage=currentImage+1;
-            document.getElementById("plant").src= "tulip.jpg"
+            document.getElementById("plants").src= "tulip.jpg"
             break;
             default:
                 currentImage=0
-                document.getElementById("plant").src= "amarnath.jpg"
+                document.getElementById("plants").src= "amarnath.jpg"
     
     }
         }
