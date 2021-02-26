@@ -19,21 +19,56 @@
 <p id="result">This text will be replaced </p>
 
 <script> 
-
-function resolveForm (){
-    console.log("Getting form values")
-    age = document.getElementById("form1_age").value
-    nick = document.getElementById("form1_nick").value
-    confirmed = confirm("Are these the values? "+age+" and "+nick)
+    var correct=0;
+    var wrong=0;
+    function processGuess(){
+        console.log("Getting form values")
+        secret = document.getElementById("form1_secret").value
+        guess= document.getElementById("form1_guess").value
+        out = document.getElementById("result")
+        if(secret == guess){
+            correct=correct+1;
+            alert("congragulations");
+            out.innerHTML = "correct attempts"+correct
+        } 
+        else {
+            wrong=wrong+1;
+            alert("sorry");
+            out.innerHTML = "wrong attempts"+wrong
+        }
     
-    out = document.getElementById("result")
-    if(confirmed){
-        out.innerHTML = "Values were confirmed"
-    } else {
-        out.innerHTML = "Values were not confirmed"
     }
-}
-</script>
+    
+    </script>
+    <div class="container">
+        <img id="plant" src="amarnath.jpg" width="200" height="200" onclick="rotateImage()">
+    </div>
+    <script>
+        var currentImage=0;
+        function rotateImage()
+        {
+    switch(currentImage){
+        case 0:
+            currentImage=currentImage+1;
+            document.getElementById("plant").src= "amarnath.jpg"
+            break;
+            case 1:
+            currentImage=currentImage+1;
+            document.getElementById("plant").src= "hibiscus.jpg"
+            break;
+            case 2:
+            currentImage=currentImage+1;
+            document.getElementById("plant").src= "tulip.jpg"
+            break;
+            default:
+                currentImage=0
+                document.getElementById("plant").src= "tulip.jpg"
+    
+    }
+        }
+    </script>
+    
+    
 
 </body>
 </html> 
