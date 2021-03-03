@@ -13,12 +13,14 @@
 <h2>Getting input</h2>
 
 <form>
+    <div class="form-group">
+    
     <label for="form1_secret">Enter the secret word</label>
     <input type ="password" id="form1_secret" name="form1_secret" min=10 max=50 step=2 value="Secret"> <br>
 
     <label for="form1_guess">Enter a guess </label>
     <input type ="text" id="form1_guess" name="form1_guess" autofocus> <br>
-
+</div>
     <input type="button" onclick="processGuess()" value="Check the guess">
 </form>
 <p id="result">result </p>
@@ -46,7 +48,7 @@
     
     </script>
     <div class="container">
-        <img id="plants" src="amarnath.jpg" width="200" height="200" onclick="rotateImage()">
+        <img id="plants" class="img-fluid" alt="Responsive image" src="amarnath.jpg" width="200" height="200" onclick="rotateImage()">
     </div>
     <script>
         var currentImage=0;
