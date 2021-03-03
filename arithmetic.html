@@ -34,8 +34,7 @@
     <input type="radio" id="rg1divide" name="color" onclick="processRadio()" value="divide">
     <label for="rg1divide">/</label></br>
 
-    <input type="button"  value="Get values from radio group">
-  </form>
+    </form>
   <p id="result2">The result displays here</p>
 
 
@@ -57,20 +56,20 @@ function processRadio() {
     firstelement = document.getElementById("first_element").value
     secondelement = document.getElementById("second_element").value
     plus = document.getElementById("rg1plus").checked
-    minus = document.getElementById("second_element").checked
-    times = document.getElementById("first_element").checked
-    divide = document.getElementById("second_element").checked
+    minus = document.getElementById("rg1minus").checked
+    times = document.getElementById("rg1times").checked
+    divide = document.getElementById("rg1divide").checked
         if (plus) {
-                document.getElementById("arithmeic").innerHTML = (Number)(firstelement) + Number(secondelement)
+                document.getElementById("result2").innerHTML = (Number)(firstelement) + Number(secondelement)
             }
             if (minus) {
-                document.getElementById("arithmeic").innerHTML = firstelement - secondelement
+                document.getElementById("result2").innerHTML = firstelement - secondelement
             }
             if (times) {
-                document.getElementById("arithmeic").innerHTML = firstelement * secondelement
+                document.getElementById("result2").innerHTML = firstelement * secondelement
             }
             if (divide) {
-                document.getElementById("arithmeic").innerHTML = firstelement / secondelement
+                document.getElementById("result2").innerHTML = firstelement / secondelement
             }
     
 
