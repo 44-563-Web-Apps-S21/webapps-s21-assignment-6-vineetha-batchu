@@ -19,13 +19,29 @@
 
     <input type="button" onclick="permutations()" value="Compute">
 </form>
-
 <p id="result">The result displays here</p>
+
+<form>
+    <input type="radio" id="rg1plus" name="color" onclick="processRadio()" value="plus">
+    <label for="rg1plus">+</label></br>
+  
+    <input type="radio" id="rg1minus" name="color" onclick="processRadio()" value="minus">
+    <label for="rg1minus">-</label></br>
+  
+    <input type="radio" id="rg1times" name="color" onclick="processRadio()" value="times">
+    <label for="rg1times">*</label></br>
+
+    <input type="radio" id="rg1divide" name="color" onclick="processRadio()" value="divide">
+    <label for="rg1divide">/</label></br>
+
+    <input type="button"  value="Get values from radio group">
+  </form>
+  <p id="result2">The result displays here</p>
+
 
 <script> 
 
 function permutations (){
-    console.log("Getting form values")
     firstelement = document.getElementById("first_element").value
     secondelement = document.getElementById("second_element").value
     let product = 1;
@@ -37,6 +53,30 @@ function permutations (){
         out.innerHTML = firstelement+" permute  "+secondelement+" is "+product
     
 }
+function processRadio() {
+    firstelement = document.getElementById("first_element").value
+    secondelement = document.getElementById("second_element").value
+    plus = document.getElementById("rg1plus").checked
+    minus = document.getElementById("second_element").checked
+    times = document.getElementById("first_element").checked
+    divide = document.getElementById("second_element").checked
+        if (plus) {
+                document.getElementById("arithmeic").innerHTML = (Number)(firstelement) + Number(secondelement)
+            }
+            if (minus) {
+                document.getElementById("arithmeic").innerHTML = firstelement - secondelement
+            }
+            if (times) {
+                document.getElementById("arithmeic").innerHTML = firstelement * secondelement
+            }
+            if (divide) {
+                document.getElementById("arithmeic").innerHTML = firstelement / secondelement
+            }
+    
+
+
+}
+
 </script>
 
 </body>
