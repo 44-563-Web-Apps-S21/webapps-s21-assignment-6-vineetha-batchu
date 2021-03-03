@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <title>
+        Arithematic Html Page
+    </title>
+
+ </head>
+<body>
+
+<h2>Vineetha Batchu computes</h2>
+
+<form>
+    <label for="first_element">Enter a number </label>
+    <input type ="number" id="first_element" name="first_element" value=10> <br>
+
+    <label for="second_element">Enter a number </label>
+    <input type="number" id="second_element" name="second_element" value="2"> <br>
+
+    <input type="button" onclick="permutations()" value="Compute">
+</form>
+
+<p id="result">The result displays here</p>
+
+<script> 
+
+function permutations (){
+    console.log("Getting form values")
+    firstelement = document.getElementById("first_element").value
+    secondelement = document.getElementById("second_element").value
+    let product = 1;
+            for (let i = firstelement; i >= firstelement - secondelement + 1; i--) {
+                product *= i;
+            }
+            out = document.getElementById("result")
+           
+        out.innerHTML = firstelement+" permutate "+secondelement+" is "+product
+    
+}
+</script>
+
+</body>
+</html> 
